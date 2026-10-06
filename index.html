@@ -1,5 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><title>ParcelPoint</title></head>
-<body><p>ParcelPoint (fictional demo brand), placeholder</p></body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>ParcelPoint | Delivery on hold</title>
+<style>
+  :root { --pp-teal:#0b6e6e; --pp-teal-dark:#084f4f; --pp-amber:#ffb020; --ink:#17212b; --muted:#5b6876; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; background:#eef3f3; color:var(--ink); }
+  .demo-banner { background:#c8102e; color:#fff; text-align:center; font-weight:800; letter-spacing:.04em; padding:12px 16px; font-size:15px; border-bottom:3px solid #8a0b20; }
+  .demo-banner small { display:block; font-weight:500; letter-spacing:0; opacity:.9; font-size:12px; margin-top:2px; }
+  header { background:var(--pp-teal); color:#fff; padding:14px 0; }
+  .bar { max-width:880px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; }
+  .logo { display:flex; align-items:center; gap:10px; font-weight:800; font-size:22px; letter-spacing:-.01em; }
+  .logo svg { width:34px; height:34px; }
+  .logo span b { color:var(--pp-amber); }
+  nav a { color:#d8efef; text-decoration:none; margin-left:22px; font-size:14px; }
+  main { max-width:880px; margin:32px auto; padding:0 20px; }
+  .card { background:#fff; border-radius:14px; box-shadow:0 6px 24px rgba(10,40,40,.08); overflow:hidden; }
+  .status { background:#fff7e6; border-bottom:1px solid #ffe0a3; padding:18px 26px; display:flex; gap:14px; align-items:center; }
+  .status .dot { width:14px; height:14px; border-radius:50%; background:var(--pp-amber); box-shadow:0 0 0 6px rgba(255,176,32,.25); flex:none; }
+  .status h1 { font-size:22px; margin:0; }
+  .body { padding:26px; display:grid; grid-template-columns: 1.3fr 1fr; gap:28px; }
+  .body p { line-height:1.55; color:var(--muted); margin:0 0 14px; }
+  .lure { font-size:18px; color:var(--ink) !important; font-weight:600; }
+  .track { background:#f3f7f7; border-radius:10px; padding:14px 16px; font-size:14px; }
+  .track div { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px dashed #d6e2e2; }
+  .track div:last-child { border-bottom:none; }
+  .track b { font-family: "Roboto Mono", monospace; font-weight:600; }
+  .fee { border:2px solid var(--pp-teal); border-radius:12px; padding:20px; text-align:center; }
+  .fee .amt { font-size:44px; font-weight:800; color:var(--pp-teal-dark); margin:6px 0; }
+  .fee .lbl { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+  .pay { display:inline-block; margin-top:14px; background:var(--pp-amber); color:#3a2600; font-weight:800; font-size:18px; padding:14px 38px; border-radius:999px; border:none; cursor:not-allowed; }
+  .timer { margin-top:12px; font-size:13px; color:#b3261e; font-weight:600; }
+  .steps { display:flex; gap:8px; margin:22px 26px 26px; }
+  .steps div { flex:1; text-align:center; font-size:12px; color:var(--muted); }
+  .steps i { display:block; height:6px; border-radius:6px; background:var(--pp-teal); margin-bottom:6px; }
+  .steps .hold i { background:var(--pp-amber); }
+  .steps .todo i { background:#d6e2e2; }
+  footer { text-align:center; color:#7b8a96; font-size:12px; padding:28px 20px 40px; }
+  @media (max-width:720px){ .body{ grid-template-columns:1fr; } nav{display:none;} }
+</style>
+</head>
+<body>
+  <div class="demo-banner" role="alert">DEMO / TRAINING SAMPLE, not a real site
+    <small>Fictional scam lookalike used for security training. ParcelPoint is a made-up brand. Nothing on this page collects or sends data.</small>
+  </div>
+  <header>
+    <div class="bar">
+      <div class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="9" width="34" height="25" rx="4" fill="#ffb020"/><path d="M3 15h34" stroke="#084f4f" stroke-width="3"/><rect x="16" y="9" width="8" height="10" fill="#084f4f"/><circle cx="20" cy="27" r="3" fill="#084f4f"/></svg>
+        <span>Parcel<b>Point</b></span>
+      </div>
+      <nav><a>Track</a><a>Ship</a><a>Locations</a><a>Help</a></nav>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <div class="status"><span class="dot"></span><h1>Your package is on hold</h1></div>
+      <div class="body">
+        <div>
+          <p class="lure">Your package is on hold. Pay a $1.99 redelivery fee to release it.</p>
+          <p>We attempted delivery but the address label was incomplete. To schedule redelivery, a small handling fee is required within 24 hours or the parcel will be returned to sender.</p>
+          <div class="track">
+            <div><span>Tracking number</span><b>PP 7731 0482 9916 US</b></div>
+            <div><span>Status</span><b style="color:#b26a00">On hold: fee due</b></div>
+            <div><span>Attempted</span><b>Yesterday, 4:12 PM</b></div>
+            <div><span>Service</span><b>ParcelPoint Ground</b></div>
+          </div>
+        </div>
+        <div class="fee">
+          <div class="lbl">Redelivery fee</div>
+          <div class="amt">$1.99</div>
+          <div class="lbl">Release your package today</div>
+          <button class="pay" type="button" disabled aria-disabled="true">Pay now</button>
+          <div class="timer">Parcel returns to sender in 23:41:09</div>
+        </div>
+      </div>
+      <div class="steps">
+        <div><i></i>Shipped</div>
+        <div><i></i>In transit</div>
+        <div class="hold"><i></i>On hold</div>
+        <div class="todo"><i></i>Out for delivery</div>
+        <div class="todo"><i></i>Delivered</div>
+      </div>
+    </div>
+  </main>
+  <footer>© ParcelPoint. Training sample only. ParcelPoint is a fictional brand.</footer>
+</body>
 </html>
